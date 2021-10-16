@@ -51,8 +51,9 @@
 
     function alterarValorProjetoRestante(valorInput){
         return new Promise((resolve)=>{
-            let valorNoSpan = parseInt(spanValorRestante.innerText.replace('$', ''));
-            let restanteAtual = valorNoSpan - valorInput;
+            /* let valorNoSpan = parseInt(spanValorRestante.innerText.replace('$', ''));
+            let restanteAtual = valorNoSpan - valorInput; */
+            let restanteAtual = valorRestante - valorInput;
             valorRestante = restanteAtual
             spanValorRestante.innerText = `$${restanteAtual}`;
             resolve(restanteAtual);
@@ -99,9 +100,7 @@
                 let restanteAtual = await alterarValorProjetoRestante(valorInput);
                 await atualizarLoadingBar(restanteAtual);
                 
-                console.log
                 if(valorRestante <= 0){
-                    console.log("entrei")
                     projetoConcluído();
                 } 
             }
