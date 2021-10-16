@@ -2,6 +2,11 @@ html,
 body{
     box-sizing: border-box;
     font-size: 20px;
+    font-family: "rooney-sans",
+    Avenir-Book,
+    Calibri,
+    sans-serif;
+    color: #424242;
 }
 
 input::-webkit-outer-spin-button,
@@ -20,45 +25,108 @@ input[type=number] {
     left: 50%;
     transform: translate(-50%,-50%);
     width: 400px;
-    background-color: pink;
+/*     background-color: pink; */
+}
+
+.balloon{
+    width: calc(100% - 4rem);
+    padding: 1.3rem 2rem;
+    background: #424242;
+    border: 2px solid #424242;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    position: relative;
+}
+
+.dinheiro-restante{
+    font-weight: bold;
+}
+
+.triangulo{
+    display: inline-block;
+    position: absolute;
+    right: 15%;
+    bottom: -12px;
+    width: 0px;
+    height: 0px;
+    background: red;
+    border-left: 10px solid white;
+    border-right: 10px solid white;
+    border-top: 10px solid #424242;
+    
 }
 
 .card{
     width: 100%;
     min-height: 300px;
-    background-color: royalblue;
+    /* background-color: royalblue; */
+    border: 2px solid #dedede;
 }
 
 .progress-bar{
     height: 1rem;
-    background-color: red;
+    /* background-color: red; */
+    border-bottom: 2px solid #dedede;
 }
 
 .loading{
     display: inline-block;
     height: 100%;
     width: 60%;
-    background-color: salmon;
+    background-color: #f15e33;
 }
 
 .description{
-    padding: 1.6rem;
+    padding: 1.6rem 1.6rem 0 1.6rem;
 }
 
 p{
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+    color: #777777;
+}
+
+.description p:last-child{
+    margin-bottom: 0;
+}
+
+.days-left{
+    color: #f15e33;
+    font-weight: bold;
+}
+
+.num-donors{
+    font-weight: bold;
 }
 
 .inputs-container{
-    background-color: sienna;
-    padding: 1rem 1.6rem;
+   /*  background-color: sienna; */
+    padding: 1rem 0;
     display: flex;
-    width: calc(100% - 3.2rem);
+    width: 100%;
     justify-content: space-between;
+    position: relative;
+}
+
+.fa-dollar-sign{
+    z-index: 100;
+    color: #777777;
+    font-weight: bold;
+    position: absolute;
+    left: 2.2rem;
+    top: 40%;
 }
 
 .input-dinheiro{
-    width: 20%;
+    width: calc(50% - 7rem);
+    border: 2px solid #dedede;
+    width: calc(46% - 2.6rem);
+    margin-left: 1.6rem;
+    padding: .7rem 0 .7rem 1.4rem;
+    border-radius: 5px;
+    font-size: 1.3rem;
 }
 
 .give-now{
@@ -66,22 +134,18 @@ p{
     font-weight: bold;
     border: none;
     background-color: #00be1c;
-    transition: background .5s ease;
+    transition: background .3s ease;
+    width: calc(48% - 1.6rem);
+    margin-right: 1.6rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
 }
 
 .give-now:hover{
-    background-color: #008314;
+    background-color: #f15e33;
     cursor: pointer;
 }
 
-.input-dinheiro,
-.give-now{
-    display: inline-block;
-    padding: .7rem 1.7rem;
-    font-size: 1.3rem;
-    border-radius: 5px;
-    border: none;
-}
 
 .info-link{
     display: block;
@@ -94,12 +158,24 @@ p{
 .botoes-container{
     display: flex;
     justify-content: space-between;
+    width: calc(100% + 4px);
 }
 
 .botao-end{
     display: inline-block;
-    width: 48%;
+    width: 49%;
     margin: .5rem 0;
     font-size: 1rem;
+    font-weight: bold;
+    color: #777777;
     padding: .7rem .5rem;
+    border: 2px solid #dedede;
+    border-radius: 5px;
+    background-color: white;
+    transition: background .5s ease;
+}
+
+.botao-end:hover{
+    background: whitesmoke;
+    cursor: pointer;
 }

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="custom.css">
 
@@ -13,7 +14,13 @@
 <body>
     <div class="box-container">
         <div class="balloon">
-
+            <span class="balloon-msg">
+                <span class="dinheiro-restante">
+                    $167
+                </span>
+                still needed for this project
+                <div class="triangulo"></div>
+            </span>
         </div>
         <div class="card">
             <div class="progress-bar">
@@ -21,7 +28,7 @@
             </div>
             <section class="description">
                 <p>
-                    <span>Only 3 days left</span> to fund this project.
+                    <span class="days-left">Only 3 days left</span> to fund this project.
                 </p>
                 <p>
                     Join the <span class="num-donors">42</span> other donors who have already supported this project. Every dollar helps.
@@ -29,7 +36,7 @@
             </section>
             
             <section class="inputs-container">
-                <!-- icon cifrão -->
+                <i class="fas fa-dollar-sign"></i>
                 <input type="number" name="dolares" class="input-dinheiro" id="id-input-dolares" value="50">
                 <button class="give-now">Give now</button>
                 
