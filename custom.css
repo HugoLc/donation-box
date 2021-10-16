@@ -25,7 +25,6 @@ input[type=number] {
     left: 50%;
     transform: translate(-50%,-50%);
     width: 400px;
-/*     background-color: pink; */
 }
 
 .balloon{
@@ -104,7 +103,6 @@ p{
 }
 
 .inputs-container{
-   /*  background-color: sienna; */
     padding: 1rem 0;
     display: flex;
     width: 100%;

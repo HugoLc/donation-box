@@ -1,4 +1,3 @@
-
 (function() {
 
     const valorDoProjeto = 2000;
@@ -13,7 +12,6 @@
     const ballonMsg = document.getElementById('id-balloon-msg')
 
     function validarInput(){
-
         let valorInserido = textInput.value;
         valorInserido = parseInt(valorInserido);
 
@@ -51,8 +49,6 @@
 
     function alterarValorProjetoRestante(valorInput){
         return new Promise((resolve)=>{
-            /* let valorNoSpan = parseInt(spanValorRestante.innerText.replace('$', ''));
-            let restanteAtual = valorNoSpan - valorInput; */
             let restanteAtual = valorRestante - valorInput;
             valorRestante = restanteAtual
             spanValorRestante.innerText = `$${restanteAtual}`;
