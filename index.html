@@ -14,31 +14,33 @@
 <body>
     <div class="box-container">
         <div class="balloon">
-            <span class="balloon-msg">
-                <span class="dinheiro-restante">
-                    $167
+            <span id="id-balloon-msg" class="balloon-msg">
+                <span id="id-valor-restante" class="dinheiro-restante">
+                    
                 </span>
                 still needed for this project
-                <div class="triangulo"></div>
+                
             </span>
+            <div class="triangulo"></div>
         </div>
         <div class="card">
             <div class="progress-bar">
-                <div class="loading"></div>
+                <div id="id-loading" class="loading"></div>
             </div>
             <section class="description">
                 <p>
                     <span class="days-left">Only 3 days left</span> to fund this project.
                 </p>
                 <p>
-                    Join the <span class="num-donors">42</span> other donors who have already supported this project. Every dollar helps.
+                    Join the <span id="id-num-donors" class="num-donors">42</span> other donors who have already supported this project. Every dollar helps.
                 </p>
             </section>
             
             <section class="inputs-container">
                 <i class="fas fa-dollar-sign"></i>
-                <input type="number" name="dolares" class="input-dinheiro" id="id-input-dolares" value="50">
-                <button class="give-now">Give now</button>
+                <input type="number" name="dolares" class="input-dinheiro" id="id-input-dolares" value="50" onkeydown="javascript: return event.keyCode === 8 ||
+event.keyCode === 46 ? true : !isNaN(Number(event.key))">
+                <button id="id-give-now" class="give-now">Give now</button>
                 
             </section>
             <a class="info-link" href="#">Why give $50?</a>
@@ -48,5 +50,16 @@
             <button class="bt-tell-friends botao-end">Tell your friends</button>
         </div>
     </div>
+    <table id="id-table" rules="all">
+        <tr>
+            <th>Amount</th>
+            <th>Date</th>
+        </tr>
+        <tr>
+            <td>$50</td>
+            <td>31/12/2020 08:44</td>
+        </tr>
+    </table>
+    <script src="./script.js"></script>
 </body>
 </html>

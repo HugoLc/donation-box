@@ -48,13 +48,14 @@ input[type=number] {
     display: inline-block;
     position: absolute;
     right: 15%;
-    bottom: -12px;
+    bottom: 0;
+    transform: translateY(110%);
     width: 0px;
     height: 0px;
-    background: red;
-    border-left: 10px solid white;
-    border-right: 10px solid white;
-    border-top: 10px solid #424242;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid#424242;
+    z-index: 100;
     
 }
 
@@ -74,8 +75,9 @@ input[type=number] {
 .loading{
     display: inline-block;
     height: 100%;
-    width: 60%;
+    width: 0;
     background-color: #f15e33;
+    transition: width 2s ease;
 }
 
 .description{
@@ -127,6 +129,12 @@ p{
     padding: .7rem 0 .7rem 1.4rem;
     border-radius: 5px;
     font-size: 1.3rem;
+    font-weight: bold;
+    color: #747474;
+}
+
+.input-dinheiro:focus{
+    color: black;
 }
 
 .give-now{
@@ -146,6 +154,12 @@ p{
     cursor: pointer;
 }
 
+.give-now:disabled,
+.give-now:disabled:hover{
+    opacity: .3;
+    background: #00be1c;
+    cursor: not-allowed;
+}
 
 .info-link{
     display: block;
@@ -178,4 +192,25 @@ p{
 .botao-end:hover{
     background: whitesmoke;
     cursor: pointer;
+}
+
+table{
+    width: 20%;
+    margin: 1rem;
+}
+
+table,
+th,
+td{
+    border: 1px solid black;
+}
+
+th{
+    padding-left: 5px;
+    font-weight: bold;
+    text-align: left;
+}
+
+td{
+    text-align: right;
 }
